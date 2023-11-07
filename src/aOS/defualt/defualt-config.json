@@ -1,0 +1,47 @@
+{
+    "Theme": {
+        "accent-color": {
+            "keyword": "LightBlue",
+            "Hex": "#ADD8E6",
+            "RGB": "rgb(173,216,230)"
+        },
+        "dark-mode": true,
+        "fontFamily": "Arial, sans-serif"
+    },
+    "Desktop": {
+        "wallpaper": "defualt.jpg",
+        "iconSize": "medium",
+        "showDesktopIcons": true
+    },
+    "Menu": {
+        "recentAppsLimit": 10,
+        "pinnedApps": [
+            {
+                "name": "File Explorer",
+                "Icon": "file-explorer-ico.png",
+                "Action": "run('explorer.exe')",
+                "path": "A:/aOS/System/FileSystem/explorer.exe"
+            },
+            {
+                "name": "aBrowser",
+                "Icon": "abrowser-ico.png",
+                "Action": "run('abrowser.exe')",
+                "path": "A:/aOS/System/Programs/DEFUALT/abrowser.exe"
+            }
+        ],
+        "showRecentApps": true
+    },
+    "Taskbar": {
+        "alwaysShowTaskbar": true
+    },
+    "Window": {
+        "fullscreenOnDoubleClick": true,
+        "minimizeOnClick": true,
+        "closeOnClick": true
+    },
+    "Preferences": {
+        "language": "en_US",
+        "timezone": "America/Los_Angeles",
+        "calendar": "Gregorian"
+    }
+}
