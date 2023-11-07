@@ -13,7 +13,7 @@
         "iconSize": "medium",
         "showDesktopIcons": true
     },
-    "Menu": {
+    "Portal": {
         "recentAppsLimit": 10,
         "pinnedApps": [
             {
