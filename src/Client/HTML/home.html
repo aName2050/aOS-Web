@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="/static/CSS/home.css" />
-		<link rel="stylesheet" href="/static/CSS/main.css" />
-		<title>aOS Web</title>
-	</head>
-	<body>
-		<nav>
-			<div id="navbar" class="width100">
-				<p>test</p>
-			</div>
-		</nav>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/CSS/home.css" />
+        <link rel="stylesheet" href="/static/CSS/main.css" />
+        <title>aOS Web</title>
+    </head>
+    <body>
+        <!-- Begin accessibility -->
+        <a href="#main" class="skip-to-main-content-link"
+            >Skip to main content</a
+        >
+        <style>
+            .skip-to-main-content-link {
+                position: absolute;
+                left: -9999px;
+                z-index: 999;
+                padding: 1em;
+                background-color: black;
+                color: white;
+                opacity: 0;
+            }
+            .skip-to-main-content-link:focus {
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 1;
+            }
+        </style>
+        <!-- End accessibility -->
+        <div class="navbar" id="navbar">
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/">About</a>
+                <a href="/">Product</a>
+                <a href="/">Contact Us</a>
+            </div>
+            <div class="nav-buttons" id="navButtons"></div>
+        </div>
+
+        <div id="main"></div>
+        <div class="body"></div>
+
+        <!-- Scripts -->
+        <script src="/static/JS/home.js"></script>
+    </body>
 </html>

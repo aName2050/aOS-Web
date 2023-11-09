@@ -1,7 +1,53 @@
-/* Elements */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-#navbar {
-	display: block;
-	background-color: #add8e6;
-	top: 0;
+.navbar {
+    background-color: lightblue;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav-links {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    padding: 0 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+
+.nav-links a:hover {
+    background-color: #008cba;
+}
+
+.nav-buttons {
+    display: block;
+    float: right;
+    margin-right: 20px;
+}
+
+.nav-buttons button {
+    color: white;
+    background-color: #4caf50;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.nav-buttons button:hover {
+    background-color: #45a049;
 }
