@@ -19,10 +19,7 @@ export default function autoLanguageDetectionMiddleware(
 
     req.lang = userPreferredLanguage?.code || 'en'; // Defualt is en (English)
 
-    if (
-        !req.path.startsWith(`/${req.lang}`) &&
-        !req.path.includes('/system/api/')
-    ) {
+    if (!req.path.startsWith(`/${req.lang}`) && !req.path.includes('/api')) {
         const newURL = `/${req.lang}${req.path.startsWith('/') ? '' : '/'}${
             req.path
         }`;
