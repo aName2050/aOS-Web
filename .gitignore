@@ -1,2 +1,4 @@
 /node_modules
 .vscode
+jest.config.js
+coverage
