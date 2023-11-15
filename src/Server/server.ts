@@ -1,15 +1,15 @@
-import express from 'express';
+import express, { Application, Request, Response, NextFunction } from 'express';
 import path from 'path';
 import * as serverConfig from '../../config/server-config.json';
 import chalk from 'chalk';
-import { Request, Response, NextFunction } from 'express';
 import cookieParser from 'cookie-parser';
 import crypto from 'node:crypto';
 import { v4 } from 'uuid';
-import cookieSession from 'cookie-session';
 
 // Handlers
-import autoLanguageDetectionMiddleware from './Handlers/autoLangDetection';
+import autoLanguageDetectionMiddleware, {
+    supportedLanguages,
+} from './Handlers/autoLangDetection';
 
 // Types
 import { IRequest } from '../types/express';
@@ -22,29 +22,30 @@ import ServerAPIRoutes from './Routes/SERVER-API';
 
 import GUIRoutes from './Routes/GUI';
 
-export const app = express();
+export const app: Application = express();
 export const PORT = serverConfig.HTTP.PORT;
-
-const keys: string[] = [v4(), v4()];
 
 // Middleware
 app.use('/static', express.static(path.join(__dirname, '../Client')));
 app.use(autoLanguageDetectionMiddleware);
 app.use(cookieParser(`${v4()}`));
-app.use(
-    cookieSession({
-        name: 'session_token',
-        keys,
-        secure: true,
-        httpOnly: true,
-        sameSite: true,
-        signed: true,
-        maxAge: 12 * 60 * 60 * 1000, // 12 hours
-    })
-);
+
+// Home [en]
+app.get('/:lang', (req: IRequest, res: Response, next: NextFunction) => {
+    if (!supportedLanguages.includes(req.params.lang) && req.params.lang != '')
+        return next();
+    res.status(200).sendFile(
+        `./src/Client/HTML/lang/${req.params.lang}/home.html`,
+        {
+            root: '.',
+        }
+    );
+});
+
+// Special Links
 
 // API (Public API)
-app.use('/public/v1/api', PublicAPIRoutes); // TODO: Public API versioning
+app.use('/api', PublicAPIRoutes); // TODO: Public API versioning
 
 // Server API (Private API)
 app.use('/server/api', ServerAPIRoutes);
@@ -54,15 +55,3 @@ app.use('/client/os/system/api', OSAPIRoutes);
 
 // GUI
 app.use('/client/os/ui', GUIRoutes);
-
-// Home
-app.get('/:lang', (req: IRequest, res: Response) => {
-    res.status(200).sendFile(`./src/Client/HTML/lang/${req.lang}/home.html`, {
-        root: '.',
-    });
-});
-
-app.get('/:lang/test', (req, res) => {
-    if (req.session) req.session.test = { a: 5, b: 7 };
-    console.log(req.session);
-});
