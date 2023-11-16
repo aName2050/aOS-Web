@@ -30,7 +30,7 @@ app.use('/static', express.static(path.join(__dirname, '../Client')));
 app.use(autoLanguageDetectionMiddleware);
 app.use(cookieParser(`${v4()}`));
 
-// Home [en]
+// Home
 app.get('/:lang', (req: IRequest, res: Response, next: NextFunction) => {
     if (!supportedLanguages.includes(req.params.lang) && req.params.lang != '')
         return next();
@@ -41,9 +41,13 @@ app.get('/:lang', (req: IRequest, res: Response, next: NextFunction) => {
         }
     );
 });
+app.get('/', (req: IRequest, res: Response, next: NextFunction) => {
+    // Fixes issue in tests/server.test.ts recieving incorrect status code due to initial redirect
+    // not visible to the user
+    res.sendStatus(302);
+});
 
 // Special Links
-
 // API (Public API)
 app.use('/api', PublicAPIRoutes); // TODO: Public API versioning
 

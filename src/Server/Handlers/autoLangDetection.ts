@@ -15,17 +15,20 @@ export default function autoLanguageDetectionMiddleware(
 
     const userLanguages = langParser.parse(req.headers['accept-language']);
 
-    const userPreferredLanguage = userLanguages.find(lang =>
-        supportedLanguages.includes(lang.code)
-    );
+    let userPreferredLanguage;
+    for (let i = 0; i < supportedLanguages.length; i++) {
+        if (
+            userLanguages.length > 0 &&
+            supportedLanguages[i] === userLanguages[0].code
+        ) {
+            userPreferredLanguage = userLanguages[0].code;
+            break;
+        } else continue;
+    }
 
-    req.lang = userPreferredLanguage?.code || 'en'; // Defualt is en (English)
+    req.lang = userPreferredLanguage || 'en'; // Defualt is en (English)
 
-    res.header('Content-Language', req.lang);
-
-    console.log(`req.lang: ${req.lang} from ${req.path}`);
-
-    console.log(res.headersSent);
+    res.header('content-language', req.lang);
 
     if (!req.path.startsWith(`/${req.lang}`) && !req.path.includes('/api')) {
         const newURL = `/${req.lang}${req.path.startsWith('/') ? '' : '/'}${
@@ -38,5 +41,5 @@ export default function autoLanguageDetectionMiddleware(
         return res.redirect(newURL);
     }
 
-    next();
+    return next();
 }
