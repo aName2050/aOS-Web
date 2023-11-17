@@ -1,3 +1,16 @@
+/* Global variables */
+:root {
+	--primary: lightBlue;
+	--secondary: gray;
+	--success: #00bb00;
+	--info: #00aadd;
+	--danger: #aa000f;
+	--warning: #ffaa00;
+	--dark: #555;
+	--light: #ddd;
+}
+
+/* Global styles */
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;

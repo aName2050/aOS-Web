@@ -1,1 +1,5 @@
-
+nav.navbar {
+	height: 50px;
+	background-color: var(--dark);
+	position: sticky;
+}
