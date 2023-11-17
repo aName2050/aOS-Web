@@ -20,52 +20,56 @@
 		>
 		<!-- End accessibility -->
 		<!-- Navbar -->
-		<nav
-			class="navbar navbar-expand-lg bg-dark sticky-top"
-			data-bs-theme="dark"
-		>
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">Navbar</a>
+		<div class="navbar navbar-expand-md bg-dark navbar-dark">
+			<div class="container">
+				<a href="/" class="navbar-brand text-info">aOS Web</a>
+
 				<button
 					class="navbar-toggler"
 					type="button"
 					data-bs-toggle="collapse"
-					data-bs-target="#navbarNavAltMarkup"
-					aria-controls="navbarNavAltMarkup"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
+					data-bs-target="#mainmenu"
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav">
-						<a class="nav-link active" aria-current="page" href="/"
-							>Home</a
-						>
-						<a class="nav-link" href="/about">About</a>
-						<a class="nav-link" href="/about/contact">Contact Us</a>
-						<a class="nav-link disabled" aria-disabled="true"
-							>Account</a
-						>
-						<hr class="border border-primary border-2 opacity-100" />
-						<form class="navbar bg-dark">
-							<button
-								class="btn btn-online-success me-2"
-								type="button"
+
+				<div class="collapse navbar-collapse" id="mainmenu">
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item">
+							<a href="/about" class="nav-link">About</a>
+						</li>
+						<li>
+							<a href="/about/contact" class="nav-link"
+								>Contact Us</a
 							>
-								Login
-							</button>
-							<button
-								class="btn btn-sm btn-outline-secondary"
-								type="button"
+						</li>
+						<li class="nav-item">
+							<a href="/help-center" class="nav-link">Support</a>
+						</li>
+						<li class="nav-item">
+							<a href="/help-center/feedback" class="nav-link"
+								>Feedback</a
 							>
-								Demo
-							</button>
-						</form>
-					</div>
+						</li>
+					</ul>
+					<li class="navbar-nav nav-item">
+						<a
+							class="btn btn-outline-info"
+							id="dynamicNavbarBtn"
+							href="/login"
+							>Login</a
+						>
+						<span style="padding: 10px"></span>
+						<a
+							class="btn btn-outline-secondary"
+							id="dynamicNavbarBtn"
+							href="/login"
+							>Demo</a
+						>
+					</li>
 				</div>
 			</div>
-		</nav>
+		</div>
 		<!-- Main page content -->
 		<div id="main"></div>
 		<div class="body">
