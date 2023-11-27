@@ -14,3 +14,19 @@ div.body#mainContent {
 h1.header {
 	color: var(--dark);
 }
+
+p.paragraph {
+	color: var(--black);
+}
+
+ul.nav-items {
+	margin: 0;
+	background-color: transparent;
+	text-align: center;
+	list-style-type: none;
+}
+
+ul.nav-items > li.nav-item {
+	background-color: transparent;
+	padding: 10px;
+}

@@ -13,9 +13,18 @@
 	--red: #fff;
 	--orange: #ff7b00;
 	--yellow: rgb(255, 254, 170);
-	--green: #00AA00;
-	--blue: #006DFF;
+	--green: #00aa00;
+	--blue: #006dff;
 	--purple: #8400ff;
+	--white: #ffffff;
+	--black: #000000;
+	--grey-100: #555;
+	--grey-200: #777;
+	--grey-300: #999;
+	--grey-400: #aaa;
+	--grey-500: #bbb;
+	--grey-600: #ccc;
+	--grey-700: #ddd;
 }
 
 /* Global styles */
