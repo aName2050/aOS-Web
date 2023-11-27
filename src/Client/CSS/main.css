@@ -1,5 +1,6 @@
 /* Global variables */
 :root {
+	/* Commonly colors for this site */
 	--primary: lightBlue;
 	--secondary: gray;
 	--success: #00bb00;
@@ -8,6 +9,13 @@
 	--warning: #ffaa00;
 	--dark: #555;
 	--light: #ddd;
+	/* Colors */
+	--red: #fff;
+	--orange: #ff7b00;
+	--yellow: rgb(255, 254, 170);
+	--green: #00AA00;
+	--blue: #006DFF;
+	--purple: #8400ff;
 }
 
 /* Global styles */

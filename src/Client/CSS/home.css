@@ -1,5 +1,16 @@
 nav.navbar {
 	height: 50px;
-	background-color: var(--dark);
 	position: sticky;
+}
+
+.bg-dark {
+	background-color: var(--dark);
+}
+
+div.body#mainContent {
+	padding: 10px;
+}
+
+h1.header {
+	color: var(--dark);
 }
