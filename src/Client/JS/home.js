@@ -7,7 +7,7 @@ window.onload = async () => {
 	}
 
 	// Load buttons
-	var navButtons = document.getElementById("navButtons");
+	// var navButtons = document.getElementById("navButtons");
 
 	var userStatusRaw = await fetch("/server/api/user/account/status");
 	var userStatus = await userStatusRaw.json();
@@ -16,8 +16,9 @@ window.onload = async () => {
 };
 
 window.addEventListener("scroll", function () {
-	var elementTarget = document.getElementById("mainHeader");
-	if (window.scrollY > elementTarget.offsetTop + elementTarget.offsetHeight) {
-		alert("You've scrolled past the second div");
+	var header = document.getElementById("mainHeader");
+	if (window.scrollY > header.offsetTop + header.offsetHeight) {
+		var navbar = document.getElementById("navbar");
+		navbar.classList.add("navbar-shadow");
 	}
 });
