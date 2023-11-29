@@ -5,6 +5,10 @@ nav.navbar {
     padding: 0;
     margin: 0;
     top: 0;
+    transition: 0.5s;
+}
+
+nav.navbar.navbar-shadow {
     box-shadow: 0 7.5px 15px;
 }
 
@@ -55,10 +59,6 @@ ul.nav-items > li.nav-item > a:hover {
 }
 
 @media screen and (max-width: 500px) {
-    body {
-        background-color: black;
-    }
-
     ul.nav-items {
         padding: 14px 2px;
     }
@@ -66,4 +66,8 @@ ul.nav-items > li.nav-item > a:hover {
     ul.nav-items > li.nav-item > a {
         padding: 19px 2px;
     }
+}
+
+@media screen and (max-width: 310px) {
+    /* coming soon! */
 }
