@@ -2,6 +2,10 @@ nav.navbar {
     height: 50px;
     position: sticky;
     text-align: center;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    box-shadow: 0 7.5px 15px;
 }
 
 .bg-dark {
@@ -40,14 +44,13 @@ ul.nav-items > li.nav-item > a {
     background-color: transparent;
     text-decoration: none;
     color: var(--light-blue);
-    padding: 19px 16px;
+    padding: 10px;
     font-weight: 700;
     transition: 0.3s;
     width: 100%;
 }
 
 ul.nav-items > li.nav-item > a:hover {
-    background-color: var(--secondary);
     color: var(--black);
 }
 
