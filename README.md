@@ -7,6 +7,7 @@ This project is a work in progress. Public testing should begin sometime next ye
 Currently supported languages are:
 - English (en)
 - Spanish (es)
+<br />
 More languages and possibly region based languages will be added later in development.
 
 # Features
