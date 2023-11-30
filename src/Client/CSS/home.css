@@ -1,34 +1,19 @@
-nav.navbar {
+/* Navbar */
+.navbar {
     height: 50px;
     position: sticky;
     text-align: center;
     padding: 0;
     margin: 0;
     top: 0;
-    transition: 0.5s;
+    transition: 0.4s;
 }
 
-nav.navbar.navbar-shadow {
+.navbar.navbar-shadow {
     box-shadow: 0 7.5px 15px;
 }
 
-.bg-dark {
-    background-color: var(--dark);
-}
-
-div.body#mainContent {
-    padding: 10px;
-}
-
-h1.header {
-    color: var(--dark);
-}
-
-p.paragraph {
-    color: var(--black);
-}
-
-ul.nav-items {
+.nav-items {
     display: inline-block;
     margin: 0;
     background-color: transparent;
@@ -38,13 +23,13 @@ ul.nav-items {
     align-self: center;
 }
 
-ul.nav-items > li.nav-item {
+.nav-items > .nav-item {
     display: inline-block;
     text-align: center;
     margin: 0 10px;
 }
 
-ul.nav-items > li.nav-item > a {
+.nav-items > .nav-item > a {
     background-color: transparent;
     text-decoration: none;
     color: var(--light-blue);
@@ -54,20 +39,79 @@ ul.nav-items > li.nav-item > a {
     width: 100%;
 }
 
-ul.nav-items > li.nav-item > a:hover {
+.nav-items > .nav-item > a:hover {
     color: var(--black);
 }
 
+/* Body */
+.body#mainContent {
+    padding: 10px;
+}
+
+.header {
+    color: var(--dark);
+}
+
+.paragraph {
+    color: var(--black);
+}
+
+/* Footer */
+.footer {
+    display: block;
+    position: relative;
+    background-color: var(--dark);
+    /* width: 100%; */
+    bottom: 0;
+    left: 0;
+    padding-top: 20px;
+    padding-left: 50px;
+
+    border: solid blue; /* Debug */
+}
+
+.footer-branding h3 {
+    font-size: 50px;
+    padding-bottom: 0;
+
+    border: solid orangered; /* Debug */
+}
+.footer-branding h4 {
+    font-size: 15px;
+    font-weight: 400;
+
+    border: solid purple; /* Debug */
+}
+.footer-branding h4 > i {
+    font-weight: 800;
+
+    border: solid lightgreen; /* Debug */
+}
+
+/* Screen size adjustments */
+
 @media screen and (max-width: 500px) {
-    ul.nav-items {
+    /* 311px - 500px wide screen */
+    .nav-items {
         padding: 14px 2px;
     }
 
-    ul.nav-items > li.nav-item > a {
+    .nav-items > li.nav-item > a {
         padding: 19px 2px;
     }
 }
 
 @media screen and (max-width: 310px) {
-    /* coming soon! */
+    /* < 310px wide screen */
+    .nav-items {
+        padding: 14px 0;
+    }
+
+    .nav-items > li.nav-item > a {
+        padding: 19px 0;
+    }
+
+    body {
+        font-size: small;
+    }
 }
