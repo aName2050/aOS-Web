@@ -24,6 +24,7 @@
 	text-align: center;
 	list-style-type: none;
 	padding: 14px 16px;
+	padding-top: 0;
 	align-self: center;
 }
 
@@ -47,18 +48,38 @@
 	color: var(--black);
 }
 
-.navbar-brand h3 {
+.navbar-brand h3 a {
 	float: left;
 	margin: 10px;
+	margin-top: 0;
 	margin-left: 20px;
 	margin-right: -400px;
+	margin-top: 0;
 	transition: 0.3s;
 	color: var(--grey-500);
+	text-decoration: none;
 }
 
-.navbar-brand h3:hover {
+.navbar-brand h3 a:hover {
 	color: var(--primary);
 	cursor: pointer;
+}
+
+.navbar-btn button {
+	float: right;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+.dynamicButton {
+	padding: 10px;
+	background-color: var(--primary);
+	transition: 0.3s;
+	border: none;
+}
+
+.dynamicButton:hover {
+	background-color: var(--secondary);
 }
 
 /* Body */
@@ -79,7 +100,7 @@
 .feature-img img {
 	width: 100%;
 	height: auto;
-	border-radius: 20px 20px 4px 4px;
+	border-radius: 20px;
 }
 
 .feature-info {
@@ -111,7 +132,7 @@
 .featured-img img {
 	width: 100%;
 	height: auto;
-	border-radius: 4px 4px 20px 20px;
+	border-radius: 20px;
 }
 
 .featured-info {
