@@ -100,7 +100,7 @@
 .feature-img img {
 	width: 100%;
 	height: auto;
-	border-radius: 20px;
+	border-radius: 20px 20px 5px 5px;
 }
 
 .feature-info {
@@ -132,7 +132,7 @@
 .featured-img img {
 	width: 100%;
 	height: auto;
-	border-radius: 20px;
+	border-radius: 5px 5px 20px 20px;
 }
 
 .featured-info {
@@ -280,6 +280,10 @@
 
 	.footer-branding h3 {
 		font-size: 40px;
+	}
+
+	.spotlight-img img {
+		border-radius: 20px;
 	}
 }
 
