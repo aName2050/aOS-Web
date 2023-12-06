@@ -1,5 +1,5 @@
-const showNotification = () => {
-	const notification = document.getElementsByClassName(
+var showNotification = function () {
+	var notification = document.getElementsByClassName(
 		"securityNotification"
 	)[0];
 	if (notification) {
@@ -7,8 +7,8 @@ const showNotification = () => {
 	}
 };
 
-const hideNotification = () => {
-	const notification = document.getElementsByClassName(
+var hideNotification = function () {
+	var notification = document.getElementsByClassName(
 		"securityNotification"
 	)[0];
 	if (notification) {
@@ -16,17 +16,15 @@ const hideNotification = () => {
 	}
 };
 
-const observerCallback = (mutationsList, observer) => {
+var observerCallback = function (mutationsList, observer) {
 	mutationsList.forEach((mutation) => {
 		mutation.addedNodes.forEach((node) => {
 			if (node.nodeType === 1) {
-				// Check if the injected element is intentional
-				const isIntentional = node.classList.contains(
+				var isIntentional = node.classList.contains(
 					"self-html-injection"
-				); // Use a class or other attribute you intentionally set
+				);
 
 				if (!isIntentional) {
-					// It's not intentional, remove it and show the on-site notification
 					node.parentNode.removeChild(node);
 					showNotification();
 				}
@@ -35,8 +33,6 @@ const observerCallback = (mutationsList, observer) => {
 	});
 };
 
-// Create a new observer with the callback
-const observer = new MutationObserver(observerCallback);
+var observer = new MutationObserver(observerCallback);
 
-// Start observing the entire document for configured mutations
 observer.observe(document.documentElement, { childList: true, subtree: true });
