@@ -1,36 +1,36 @@
 var showNotification = function () {
-	var notification = document.getElementsByClassName(
-		"securityNotification"
-	)[0];
-	if (notification) {
-		notification.style.display = "block";
-	}
+    var notification = document.getElementsByClassName(
+        'securityNotification'
+    )[0];
+    if (notification) {
+        notification.style.display = 'block';
+    }
 };
 
 var hideNotification = function () {
-	var notification = document.getElementsByClassName(
-		"securityNotification"
-	)[0];
-	if (notification) {
-		notification.style.display = "none";
-	}
+    var notification = document.getElementsByClassName(
+        'securityNotification'
+    )[0];
+    if (notification) {
+        notification.style.display = 'none';
+    }
 };
 
 var observerCallback = function (mutationsList, observer) {
-	mutationsList.forEach((mutation) => {
-		mutation.addedNodes.forEach((node) => {
-			if (node.nodeType === 1) {
-				var isIntentional = node.classList.contains(
-					"self-html-injection"
-				);
+    mutationsList.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+            if (node.nodeType === 1) {
+                var isIntentional = node.classList.contains(
+                    'self-html-injection'
+                );
 
-				if (!isIntentional) {
-					node.parentNode.removeChild(node);
-					showNotification();
-				}
-			}
-		});
-	});
+                if (!isIntentional) {
+                    node.parentNode.removeChild(node);
+                    showNotification();
+                }
+            }
+        });
+    });
 };
 
 var observer = new MutationObserver(observerCallback);
