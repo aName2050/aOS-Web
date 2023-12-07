@@ -47,6 +47,10 @@ app.get("/", (req: IRequest, res: Response, next: NextFunction) => {
 	res.sendStatus(302);
 });
 
+app.post("/:lang/test", (req, res) => {
+	res.json({ error: req.body });
+});
+
 // Special Links
 // API (Public API)
 app.use("/api", PublicAPIRoutes); // TODO: Public API versioning

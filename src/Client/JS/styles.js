@@ -12,7 +12,7 @@ window.addEventListener("scroll", function () {
 
 function handleMediaSize(media) {
 	// TODO: finish implementation
-	console.log(`${media}`);
+	// console.log(`${media}`);
 	if (media.matches) {
 		var replaceableElement = document.getElementsByClassName("replaceable");
 		replaceableElement[0].classList.remove("replaceable");
@@ -26,8 +26,8 @@ function handleMediaSize(media) {
 
 var media = window.matchMedia("(max-width: 500px)");
 
-handleMediaSize(media);
+// handleMediaSize(media);
 
-media.addEventListener("change", function () {
-	handleMediaSize(media);
-});
+// media.addEventListener("change", function () {
+// 	handleMediaSize(media);
+// });

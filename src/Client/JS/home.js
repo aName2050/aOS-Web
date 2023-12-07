@@ -1,4 +1,4 @@
-// TODO: finish implementation
+// TODO: finish implementationr56
 window.onload = async () => {
 	// Reload page once to resolve any network issues
 	var reloaded = sessionStorage.getItem("reloaded");
@@ -13,5 +13,5 @@ window.onload = async () => {
 	var userStatusRaw = await fetch("/server/api/user/account/status");
 	var userStatus = await userStatusRaw.json();
 
-	console.log(userStatus);
+	// console.log(userStatus);
 };
