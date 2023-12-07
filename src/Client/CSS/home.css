@@ -99,11 +99,17 @@
 	border-radius: 10px;
 }
 
-.dynamicButton {
-	padding: 10px;
-	background-color: var(--primary);
+.dynamicButton a {
 	transition: 0.3s;
 	border: none;
+	float: right;
+	height: 20px;
+	text-align: center;
+	margin-top: -10px;
+	margin-right: 20px;
+	padding: 10px;
+
+	border: solid red;
 }
 
 .dynamicButton:hover {
@@ -340,10 +346,6 @@
 
 	.nav-item {
 		display: block;
-	}
-
-	.replaceale {
-		display: none;
 	}
 }
 
