@@ -323,7 +323,7 @@
 	}
 
 	.securityNotification {
-		display: block;
+		display: none;
 		background-color: var(--danger);
 		width: 90%;
 		border-radius: 15px;
