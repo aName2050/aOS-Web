@@ -99,6 +99,11 @@
 	border-radius: 10px;
 }
 
+.dynamicButton {
+	position: relative;
+	top: -10px;
+}
+
 .dynamicButton a {
 	background-color: var(--primary);
 	transition: 0.3s;
@@ -106,13 +111,13 @@
 	float: right;
 	height: 20px;
 	text-align: center;
-	margin-top: -10px;
+	margin-top: 5px;
 	margin-right: 20px;
-	padding: 10px;
+	padding: 5px;
+	padding-bottom: 10px;
 	text-decoration: none;
 	color: var(--black);
-
-	border: solid red;
+	border-radius: 10px;
 }
 
 .dynamicButton a:hover {
@@ -132,6 +137,10 @@
 	display: flex;
 	max-width: 1200px;
 	margin: 50px auto;
+}
+
+img {
+	border-radius: 5px;
 }
 
 .feature-img {
@@ -311,11 +320,21 @@
 @media screen and (max-width: 500px) {
 	/* 311px - 500px wide screen */
 	.nav-items {
-		padding: 14px 2px;
+		padding: 0 2px;
 	}
 
 	.nav-items > li.nav-item > a {
-		padding: 19px 2px;
+		position: relative;
+		padding: 5px 2px;
+		top: -10px;
+	}
+
+	.dynamicButton {
+		position: relative;
+		padding: 2px 3px;
+		top: -20px;
+		margin-right: -10px;
+		margin-left: 5px;
 	}
 
 	.nav-groups {
@@ -325,10 +344,6 @@
 
 	.footer-branding h3 {
 		font-size: 40px;
-	}
-
-	.spotlight-img img {
-		border-radius: 20px;
 	}
 
 	.securityNotification {
@@ -349,6 +364,11 @@
 
 	.nav-item {
 		display: block;
+	}
+
+	.btn-cta {
+		display: block;
+		margin: 15px auto;
 	}
 }
 
@@ -371,5 +391,22 @@
 	/* Adjusts navbar on smaller screens */
 	.navbar-brand {
 		display: none;
+	}
+
+	.nav-item#demo {
+		display: none;
+	}
+
+	.featured-container {
+		display: block;
+	}
+
+	.features-container {
+		display: block;
+	}
+
+	.spotlight-img img {
+		border-radius: 20px;
+		margin: 10px;
 	}
 }
