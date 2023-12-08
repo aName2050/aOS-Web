@@ -318,7 +318,7 @@ img {
 /* Screen size adjustments */
 
 @media screen and (max-width: 500px) {
-	/* 311px - 500px wide screen */
+	/* 351px - 500px wide screen */
 	.nav-items {
 		padding: 0 2px;
 	}
@@ -372,14 +372,19 @@ img {
 	}
 }
 
-@media screen and (max-width: 310px) {
-	/* < 310px wide screen */
+@media screen and (max-width: 350px) {
+	/* < 350px wide screen */
 	.nav-items {
-		padding: 14px 0;
+		padding: 7px 0;
 	}
 
 	.nav-items > li.nav-item > a {
-		padding: 19px 0;
+		padding: 15px 0;
+	}
+
+	.dynamicButton a {
+		padding: 5px;
+		margin-top: 15px;
 	}
 
 	body {
@@ -407,6 +412,7 @@ img {
 
 	.spotlight-img img {
 		border-radius: 20px;
-		margin: 10px;
+		margin-left: 20px;
+		width: 90%;
 	}
 }
