@@ -1,0 +1,66 @@
+/* Global variables */
+:root {
+	/* Commonly colors for this site */
+	--primary: #0672ac;
+	--secondary: gray;
+	--success: #00bb00;
+	--info: #00aadd;
+	--danger: #aa000f;
+	--warning: #ffaa00;
+	--dark: #222; /* #222 */
+	--light: #ddd; /* Colors
+    */
+	--red: #fff;
+	--orange: #ff7b00;
+	--yellow: rgb(255, 254, 170);
+	--green: #00aa00;
+	--blue: #006dff;
+	--light-blue: #00aaee;
+	--purple: #8400ff;
+	--white: #ffffff;
+	--black: #000000;
+	--grey-100: #555;
+	--grey-200: #777;
+	--grey-300: #999;
+	--grey-400: #aaa;
+	--grey-500: #bbb;
+	--grey-600: #ccc;
+	--grey-700: #ddd;
+} /*
+    Global styles */
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	scrollbar-width: none;
+	font-size: larger;
+	background-color: var(--dark);
+	text-align: center;
+	overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+	display: none;
+} /* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+div.wrapper {
+	background-color: var(--grey-100);
+}
+.bg-dark {
+	background-color: var(--dark);
+}
+.skip-to-main-content-link {
+	position: absolute;
+	left: -9999px;
+	z-index: 999;
+	padding: 1em;
+	background-color: black;
+	color: white;
+	opacity: 0;
+}
+.skip-to-main-content-link:focus {
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 1;
+}
