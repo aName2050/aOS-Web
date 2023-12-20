@@ -30,6 +30,9 @@ app.use("/static", express.static(path.join(__dirname, "../Client")));
 app.use(autoLanguageDetectionMiddleware);
 app.use(cookieParser(`${v4()}`));
 
+// Offline handling
+app.use("/", express.static(path.join(__dirname, ".../Client/offline")));
+
 // Home
 app.get("/:lang", (req: IRequest, res: Response, next: NextFunction) => {
 	if (!supportedLanguages.includes(req.params.lang) && req.params.lang != "")

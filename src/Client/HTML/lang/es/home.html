@@ -1,213 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/static/CSS/main.css" />
-        <link rel="stylesheet" href="/static/CSS/home.css" />
-        <script src="/static/JS/styles.js"></script>
-        <title>aOS Web</title>
-    </head>
-    <body>
-        <a href="#main" class="skip-to-main-content-link"
-            >Saltar al contenido principal</a
-        >
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/static/CSS/main.css" />
+		<link rel="stylesheet" href="/static/CSS/home.css" />
+		<script src="/static/JS/styles.js"></script>
+		<script src="/static/JS/reg-sw.js"></script>
+		<title>aOS Web</title>
+	</head>
+	<body>
+		<a href="#main" class="skip-to-main-content-link"
+			>Saltar al contenido principal</a
+		>
 
-        <div class="nav-wrapper">
-            <div class="navbar bg-dark" id="navbar">
-                <nav>
-                    <div class="navbar-brand">
-                        <h3><a href="/es/">aOS Web</a></h3>
-                    </div>
-                    <div class="navbar-button dynamicButton">
-                        <h3><a href="/account/login">Login</a></h3>
-                    </div>
-                    <ul class="nav-items">
-                        <li class="nav-item">
-                            <a href="/es/">Hogar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/account">Acerca</a>
-                        </li>
-                        <li class="nav-item" id="demo">
-                            <a href="/aos/limited">Manifestación</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div id="main"></div>
+		<div class="nav-wrapper">
+			<div class="navbar bg-dark" id="navbar">
+				<nav>
+					<div class="navbar-brand">
+						<h3><a href="/es/">aOS Web</a></h3>
+					</div>
+					<div class="navbar-button dynamicButton">
+						<h3><a href="/account/login">Login</a></h3>
+					</div>
+					<ul class="nav-items">
+						<li class="nav-item">
+							<a href="/es/">Hogar</a>
+						</li>
+						<li class="nav-item">
+							<a href="/about">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="/account">Acerca</a>
+						</li>
+						<li class="nav-item" id="demo">
+							<a href="/aos/limited">Manifestación</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div id="main"></div>
 
-        <div class="securityNotification">
-            <h2>Alerta de seguridad</h2>
-            <p>
-                Se detectaron cambios no autorizados en el sitio y se
-                revirtieron a garantizar la integridad del sitio. Si esto fue
-                causado por una extensión, deshabilite la extensión para
-                garantizar una experiencia de usuario segura. Si Este eras tú,
-                por favor evita alterar el sitio.
-            </p>
-            <button onclick="hideNotification()">Cerca</button>
-        </div>
-        <div class="wrapper">
-            <div class="body" id="mainContent">
-                <div class="container">
-                    <div class="features-container spotlight-container">
-                        <div class="feature-img spotlight-img">
-                            <img
-                                src="https://placehold.co/400x200"
-                                alt="placeholder image"
-                            />
-                        </div>
-                        <br />
-                        <div class="feature-info spotlight-content">
-                            <h2>Computación basada en la nube</h2>
-                            <p>
-                                aOS Web está alojado y se ejecuta 100% en la
-                                nube. Si Quieres ejecutar el mejor sistema
-                                operativo, pero tu computadora No puedo
-                                manejarlo, aOS Web es el siguiente mejor
-                                ¡opción! El único requisito es un navegador web
-                                <a
-                                    class="external"
-                                    href="/support/articles/system-requirements"
-                                    ><img
-                                        src="https://placehold.co/20x20"
-                                        alt="placeholder image"
-                                /></a>
-                                y una conexión a internet. aOS Web es uno de los
-                                sistemas operativos más potentes alojados en la
-                                nube. Proporcionar una interfaz de usuario
-                                sencilla, con mucha personalización y opciones
-                                avanzadas disponibles en el clic de un botón.
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="featured-container spotlight-container"
-                        style="margin-top: -25px"
-                    >
-                        <div class="featured-img spotlight-img">
-                            <img
-                                src="https://placehold.co/400x200"
-                                alt="placeholder image"
-                            />
-                        </div>
-                        <br />
-                        <div class="featured-info spotlight-content">
-                            <h2>
-                                Presentamos el Compacter SHIELD
-                                <a
-                                    class="external"
-                                    href="/external/redirect/compacter/SHIELD"
-                                    ><img
-                                        src="https://placehold.co/20x20"
-                                        alt="placeholder image"
-                                /></a>
-                            </h2>
-                            <p>
-                                <i
-                                    >¡Próximamente en el bot Compacter
-                                    Discord!</i
-                                >
-                                <br />
-                                ¡Presentamos Compacter SHIELD! ESCUDO
-                                compactador representa
-                                <strong
-                                    >Server Health and Integrity Evaluator and
-                                    Lead Defense</strong
-                                >. Esta nueva característica de seguridad
-                                introducirá Detección de ataques a servidores y
-                                armas nucleares, así como Detección de cuenta
-                                comprometida. Todos estos Las características
-                                incluirán características adicionales que
-                                reducirá el impacto en su servidor. Algunos de
-                                estas características incluirán: bloqueo del
-                                servidor, Alertas y cuarentena. La cuarentena
-                                también afectar a los moderadores que parecen
-                                tener su cuenta comprometida, pero para que esto
-                                funcione, todos Los roles de moderador deben
-                                <strong>no</strong> tener el permiso de
-                                administrador.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="cta-container">
-                        <button class="btn-cta info" type="button">
-                            <a class="btn-cta-link" href="/about/aos"
-                                >Aprende más</a
-                            >
-                        </button>
-                        <button class="btn-cta demo" type="button">
-                            <a class="btn-cta-link" href="/aos/limited"
-                                >Pruebe aOS Web</a
-                            >
-                        </button>
-                        <button class="btn-cta external" type="button">
-                            <a
-                                class="btn-cta-link"
-                                href="/external/redirect/compacter"
-                                >Compacter</a
-                            >
-                        </button>
-                    </div>
-                </div>
-                <br />
-            </div>
-        </div>
-        <div class="footer" style="margin-top: 20px">
-            <div class="footer-branding">
-                <h3>aOS Web</h3>
-                <h4>Por <i>Compacted Software</i></h4>
-            </div>
-            <div class="footer-nav">
-                <div class="nav-groups">
-                    <div data-group="1">
-                        <h3 class="footer-group-header">Legal</h3>
-                        <ul class="footer-group-links">
-                            <li class="footer-nav-item">
-                                <a href="/legal/tos">Términos de servicio</a>
-                            </li>
-                            <li class="footer-nav-item">
-                                <a href="/legal/privacy"
-                                    >política de privacidad</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div data-group="2">
-                        <h3 class="footer-group-header">Sobre nosotros</h3>
-                        <ul class="footer-group-links">
-                            <li class="footer-nav-item">
-                                <a href="/about/us">Acerca de nuestro equipo</a>
-                            </li>
-                            <li class="footer-nav-item">
-                                <a href="/about/contact"
-                                    >Contacta con nosotros</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div data-group="3">
-                        <h3 class="footer-group-header">Producto</h3>
-                        <ul class="footer-group-links">
-                            <li class="footer-nav-item">
-                                <a href="/aos/limited">Manifestación</a>
-                            </li>
-                            <li class="footer-nav-item">
-                                <a href="/account/new">Crea una cuenta</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="/static/JS/home.js"></script>
-        <!-- System integrity not checked on the homepage -->
-        <!-- <script async src="/static/JS/system-integrity.js"></script> -->
-        <!-- End of file -->
-    </body>
+		<div class="securityNotification">
+			<h2>Alerta de seguridad</h2>
+			<p>
+				Se detectaron cambios no autorizados en el sitio y se
+				revirtieron a garantizar la integridad del sitio. Si esto fue
+				causado por una extensión, deshabilite la extensión para
+				garantizar una experiencia de usuario segura. Si Este eras tú,
+				por favor evita alterar el sitio.
+			</p>
+			<button onclick="hideNotification()">Cerca</button>
+		</div>
+		<div class="wrapper">
+			<div class="body" id="mainContent">
+				<div class="container">
+					<div class="features-container spotlight-container">
+						<div class="feature-img spotlight-img">
+							<img
+								src="https://placehold.co/400x200"
+								alt="placeholder image"
+							/>
+						</div>
+						<br />
+						<div class="feature-info spotlight-content">
+							<h2>Computación basada en la nube</h2>
+							<p>
+								aOS Web está alojado y se ejecuta 100% en la
+								nube. Si Quieres ejecutar el mejor sistema
+								operativo, pero tu computadora No puedo
+								manejarlo, aOS Web es el siguiente mejor
+								¡opción! El único requisito es un navegador web
+								<a
+									class="external"
+									href="/support/articles/system-requirements"
+									><img
+										src="https://placehold.co/20x20"
+										alt="placeholder image"
+								/></a>
+								y una conexión a internet. aOS Web es uno de los
+								sistemas operativos más potentes alojados en la
+								nube. Proporcionar una interfaz de usuario
+								sencilla, con mucha personalización y opciones
+								avanzadas disponibles en el clic de un botón.
+							</p>
+						</div>
+					</div>
+					<div
+						class="featured-container spotlight-container"
+						style="margin-top: -25px"
+					>
+						<div class="featured-img spotlight-img">
+							<img
+								src="https://placehold.co/400x200"
+								alt="placeholder image"
+							/>
+						</div>
+						<br />
+						<div class="featured-info spotlight-content">
+							<h2>
+								Presentamos el Compacter SHIELD
+								<a
+									class="external"
+									href="/external/redirect/compacter/SHIELD"
+									><img
+										src="https://placehold.co/20x20"
+										alt="placeholder image"
+								/></a>
+							</h2>
+							<p>
+								<i
+									>¡Próximamente en el bot Compacter
+									Discord!</i
+								>
+								<br />
+								¡Presentamos Compacter SHIELD! ESCUDO
+								compactador representa
+								<strong
+									>Server Health and Integrity Evaluator and
+									Lead Defense</strong
+								>. Esta nueva característica de seguridad
+								introducirá Detección de ataques a servidores y
+								armas nucleares, así como Detección de cuenta
+								comprometida. Todos estos Las características
+								incluirán características adicionales que
+								reducirá el impacto en su servidor. Algunos de
+								estas características incluirán: bloqueo del
+								servidor, Alertas y cuarentena. La cuarentena
+								también afectar a los moderadores que parecen
+								tener su cuenta comprometida, pero para que esto
+								funcione, todos Los roles de moderador deben
+								<strong>no</strong> tener el permiso de
+								administrador.
+							</p>
+						</div>
+					</div>
+					<div class="cta-container">
+						<button class="btn-cta info" type="button">
+							<a class="btn-cta-link" href="/about/aos"
+								>Aprende más</a
+							>
+						</button>
+						<button class="btn-cta demo" type="button">
+							<a class="btn-cta-link" href="/aos/limited"
+								>Pruebe aOS Web</a
+							>
+						</button>
+						<button class="btn-cta external" type="button">
+							<a
+								class="btn-cta-link"
+								href="/external/redirect/compacter"
+								>Compacter</a
+							>
+						</button>
+					</div>
+				</div>
+				<br />
+			</div>
+		</div>
+		<div class="footer" style="margin-top: 20px">
+			<div class="footer-branding">
+				<h3>aOS Web</h3>
+				<h4>Por <i>Compacted Software</i></h4>
+			</div>
+			<div class="footer-nav">
+				<div class="nav-groups">
+					<div data-group="1">
+						<h3 class="footer-group-header">Legal</h3>
+						<ul class="footer-group-links">
+							<li class="footer-nav-item">
+								<a href="/legal/tos">Términos de servicio</a>
+							</li>
+							<li class="footer-nav-item">
+								<a href="/legal/privacy"
+									>política de privacidad</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div data-group="2">
+						<h3 class="footer-group-header">Sobre nosotros</h3>
+						<ul class="footer-group-links">
+							<li class="footer-nav-item">
+								<a href="/about/us">Acerca de nuestro equipo</a>
+							</li>
+							<li class="footer-nav-item">
+								<a href="/about/contact"
+									>Contacta con nosotros</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div data-group="3">
+						<h3 class="footer-group-header">Producto</h3>
+						<ul class="footer-group-links">
+							<li class="footer-nav-item">
+								<a href="/aos/limited">Manifestación</a>
+							</li>
+							<li class="footer-nav-item">
+								<a href="/account/new">Crea una cuenta</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/static/JS/home.js"></script>
+		<!-- System integrity not checked on the homepage -->
+		<!-- <script async src="/static/JS/system-integrity.js"></script> -->
+		<!-- End of file -->
+	</body>
 </html>
