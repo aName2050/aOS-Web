@@ -9,25 +9,3 @@ window.addEventListener("scroll", function () {
 		navbar.classList.remove("navbar-shadow");
 	}
 });
-
-function handleMediaSize(media) {
-	// TODO: finish implementation
-	// console.log(`${media}`);
-	if (media.matches) {
-		var replaceableElement = document.getElementsByClassName("replaceable");
-		replaceableElement[0].classList.remove("replaceable");
-		replaceableElement[1].classList.add("replaceable");
-	} else {
-		var replaceableElement = document.getElementsByClassName("replaceable");
-		replaceableElement[1].classList.remove("replaceable");
-		replaceableElement[0].classList.add("replaceable");
-	}
-}
-
-var media = window.matchMedia("(max-width: 500px)");
-
-// handleMediaSize(media);
-
-// media.addEventListener("change", function () {
-// 	handleMediaSize(media);
-// });
